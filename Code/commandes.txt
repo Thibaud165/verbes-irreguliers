@@ -1,0 +1,1 @@
+pyinstall --onefile verbes_irreguliers.py
