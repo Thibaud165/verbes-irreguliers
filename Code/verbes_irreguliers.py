@@ -86,7 +86,7 @@ erreurs = []
 
 # ===== UI =====
 fenetre = tk.Tk()
-fenetre.title("Exemple TextBox")
+fenetre.title("Verbes Irréguliers Training")
 
 texte_var = tk.StringVar()
 
@@ -153,3 +153,4 @@ else:
 
 
 fenetre.mainloop()
+
