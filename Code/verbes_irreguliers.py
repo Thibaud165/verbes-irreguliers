@@ -1,3 +1,5 @@
+import random
+
 verbes_1 = {
     "casser": ("break", "broke", "broken"),
     "construire": ("build", "built", "built"),
@@ -82,6 +84,24 @@ score = 0
 total = len(verbes)
 erreurs = []
 
+# ===== UI =====
+fenetre = tk.Tk()
+fenetre.title("Exemple TextBox")
+
+texte_var = tk.StringVar()
+
+textbox = tk.Entry(fenetre, textvariable=texte_var, width=30)
+textbox.pack(pady=10)
+
+def recuperer_texte():
+    contenu = texte_var.get()
+    print(contenu)
+
+bouton = tk.Button(fenetre, text="Suivant", command=recuperer_texte)
+bouton.pack(pady=5)
+
+# ===== logique =====
+
 print("=" * 50)
 print("QUIZ VERBES IRRÉGULIERS 🎯 (liste " + input_choice + ")")
 print("=" * 50)
@@ -131,4 +151,5 @@ if erreurs:
 else:
     print("\n🔥 PARFAIT!")
 
-input()
+
+fenetre.mainloop()
